@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "https://mobapi.finca.am:8081/swagger",
+    "secure": false,
+    "pathRewrite": {"^/api" : ""},
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
