@@ -1,0 +1,32 @@
+<div class="container card pt-5">
+  <div class="text-center mb-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+      <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+    </svg>
+    <h4 class="mt-2">Login as Existing User</h4>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <ng-container>
+      <div class="form-group">
+        <label for="userName">Username</label>
+        <input class="form-control" type="text" formControlName="userName" id="userName">
+        <!-- error -->
+        <div class="invalid-feedback" *ngIf="submitted && form.value.userName.errors?.required">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" formControlName="password" id="password">
+        <!-- error -->
+        <div class="invalid-feedback" *ngIf="submitted && form.value.password.errors?.required">
+          Password is required.
+        </div>
+      </div>
+    </ng-container>
+
+    <button class="btn btn-light w-100 mb-3" (click)="isNew = false" type="submit">LOGIN</button>
+    <button class="btn btn-info w-100 mb-3" (click)="isNew = true" type="submit">NEW USER? REGISTER HERE</button>
+  </form>
+</div>

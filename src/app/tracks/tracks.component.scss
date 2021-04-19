@@ -1,0 +1,55 @@
+.nav-wrapper {
+  background-color: #024b9a;
+  .nav-item {
+    .nav-link, h3, .bi.bi-wallet2 {
+      color: #d39e00;
+    }
+    .bi.bi-wallet2 {
+      font-size: 2rem;
+    }
+    .bi.bi-person-circle {
+      color: #ffffff;
+    }
+    .nav-link.username {
+      color: #ffffff;
+      font-size: 2rem;
+    }
+  }
+}
+
+.track {
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  height: 100px;
+  .trackPlayer {
+    audio {
+      width: 95%;
+    }
+  }
+  .like {
+    font-size: 2rem;
+  }
+  .like-icon {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    svg {
+      color: #cccccc;
+    }
+  }
+  .like-icon.active {
+    svg {
+      color: #CC197D;
+    }
+  }
+  .trackName h4 {
+    color: #024b9a;
+  }
+}
+.form-control {
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 3.5rem;
+}
